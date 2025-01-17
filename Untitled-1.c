@@ -1,53 +1,25 @@
 #include <stdio.h>
-
-#define NUM_ALUNOS 4
-
-// Definição da estrutura para armazenar os dados do aluno
-typedef struct {
-    char nome[50];    // Nome do aluno
-    float notas[3];   // Array para armazenar as 3 notas
-    float media;      // Média das 3 notas
-} Aluno;
-
-int main() {
-    Aluno alunos[NUM_ALUNOS]; // Array para 4 alunos
-    int i, j;
-
-    // Entrada de dados dos alunos
-    for (i = 0; i < NUM_ALUNOS; i++) {
-        printf("Digite o nome do aluno %d: ", i + 1);
-        scanf(" %[^\n]", alunos[i].nome); // Lê o nome do aluno, incluindo espaços
-
-        float soma = 0.0; // Variável para somar as notas
-        for (j = 0; j < 3; j++) {
-            printf("Digite a nota %d do aluno %s: ", j + 1, alunos[i].nome);
-            scanf("%f", &alunos[i].notas[j]);
-            soma += alunos[i].notas[j]; // Acumula as notas
-        }
-
-        alunos[i].media = soma / 3.0; // Calcula a média
-        printf("\n");
-        if (alunos[i].media <2){
-            printf("voce esta reprovado",alunos[i].media);
-        }else{
-            if(alunos[i].media >2&& alunos[i].media<=5){
-                printf("voce esta de recuparação",alunos[i].media);
-            }else{
-                printf("voce esta aprovado",alunos[i].media);
-            }
-        }
-
-    }
-
-    // Exibição dos dados dos alunos
-    printf("\nDados dos alunos:\n");
-    for (i = 0; i < NUM_ALUNOS; i++) {
-        printf("Aluno: %s\n", alunos[i].nome);
-        for (j = 0; j < 3; j++) {
-            printf("  Nota %d: %.2f\n", j + 1, alunos[i].notas[j]);
-        }
-        printf("  Média final: %.2f\n\n", alunos[i].media);
-    }
-
+int main(){
+    float pedro,geovana,silvana,valor_da_entrada = 0;// compra do apartamento
+    float apartamento_total;// valor apartamento
+    float porcentagem_1,porcentagem_2,porcentagem_3,porcentagem_total = 0;// porcentagem para cada pessoa 
+    float quanto_falta_para_pagar = 0;// valor que falta para pagar
+    printf("pedro");
+    scanf("%f",&pedro);
+    printf("geovana");
+    scanf("%f",&geovana);
+    printf("silvana");
+    scanf("%f",&silvana);
+    printf("apartamento_total");
+    scanf("%f",&apartamento_total);
+    valor_da_entrada = (float) (pedro,geovana,silvana);
+    porcentagem_1 = (float) (pedro/valor_da_entrada);
+    porcentagem_2 = (float) (geovana/valor_da_entrada);
+    porcentagem_3 = (float) (silvana/valor_da_entrada);
+    quanto_falta_para_pagar = (float) (apartamento_total - valor_da_entrada);
+    printf ("quanto falta para pagar %.2f\n",quanto_falta_para_pagar);
+    printf("pedro deu entrada de %.2f que corresponde a %.2f\n",pedro,porcentagem_1);
+    printf("geovana deu entrada de %.2f que corresponde a %.2f\n",geovana,porcentagem_2);
+    printf("silvana deu entrada de %.2f que corresponde a %.2f\n",silvana,porcentagem_3);
     return 0;
 }
