@@ -1,0 +1,58 @@
+int main (){
+    int  valor1,valor2,valor3,soma;
+    printf (" relatar o valor de entra 1: ");
+    scanf ("%d",&valor1);
+    printf (" relatar o valor de entra 2: ");
+    scanf ("%d",&valor2);
+    printf (" relatar o valor de entra 3: ");
+    scanf ("%d",&valor3);
+    soma = valor1 + valor2 + valor3;
+    printf ("o valor da soma dos 3 valores é %d\n: ",soma);
+    if (soma >100 && soma < 200){
+        printf ("valor abaixo do esperado\n");
+    } else if(soma >300 &&  soma < 500){
+        printf("valor chegando ao aceitavel\n");
+    } if (soma >500) {
+        printf ("valor aceitavel");
+    }
+    
+    printf ("o valor vai ser classificado como  %d\n: ",soma);
+
+    switch (soma){
+        case 100:
+        printf ("valor baixo 1");
+        break;
+        case 200:
+        printf ("valor baixo 2");
+        break;
+        case 300:
+        printf ("valor aceitavel 1");
+        break;
+        case 400:
+        printf ("valor aceitavel 2");
+        break;
+        case 500:
+        printf ("valor ideal 1");
+        break;
+        case 600:
+        printf ("valor valor perfeito 1");
+        break;
+        case 700:
+        printf ("valor valor perfeito 2");
+        break;
+        case 800:
+        printf ("valor valor perfeito 3");
+        break;
+        case 900:
+        printf ("valor valor perfeito 4");
+        break;
+        case 1000:
+        printf ("valor valor perfeito 5");
+        break;
+        default:
+        printf ("valor sem classificacao");
+        
+        }
+        return 0;
+        }
+       
